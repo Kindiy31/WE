@@ -42,7 +42,7 @@ export const Header = (props) => {
     });
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/api/categories');
+        const response = await axios.get('http://192.168.0.6:5000/api/categories');
         console.log(response);
         SetCategories(response.data);
       } catch (error) {

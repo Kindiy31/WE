@@ -10,7 +10,7 @@ export const Main = (props) => {
               const data = {
                 id_category: props.categorie
                 };
-              const response = await axios.post('http://127.0.0.1:5000/api/products', data);
+              const response = await axios.post('http://192.168.0.6:5000/api/products', data);
               SetProducts(response.data);
             } catch (error) {
               console.error('Error fetching categories: ', error);
