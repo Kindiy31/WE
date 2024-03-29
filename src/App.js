@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header 
-        SetPath={SetCategorie}
+        SetCategorie={SetCategorie}
       />
       <Main 
         categorie={categorie}
