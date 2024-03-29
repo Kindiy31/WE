@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from 'axios';
-import "./Header.css";
 
 export const Main = (props) => {
     const [products, SetProducts] = useState([]);
