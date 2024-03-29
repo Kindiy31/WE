@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import './App.css';
 import { Header } from './Components/Header/Header';
-import logo from './logo.svg';
-import menuIcon from './menu.svg';
+import { Main } from './Components/Main/Main';
 
 function App() {
   const tg = window.Telegram.WebApp;
-  const [path, SetPath] = useState('home')
+  const [categorie, SetCategorie] = useState('home')
   return (
     <>
       <Header 
-        SetPath={SetPath}
+        SetPath={SetCategorie}
+      />
+      <Main 
+        categorie={categorie}
       />
 
     </>

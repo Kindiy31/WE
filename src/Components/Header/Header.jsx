@@ -64,7 +64,7 @@ export const Header = (props) => {
           <li 
             className="header__nav-item"
             key={categorie.id}
-            onClick={() => props.SetPath(categorie.name)}
+            onClick={() => props.SetCategorie(categorie.id)}
           >{categorie.name}</li>
         ))}
         </ul>
