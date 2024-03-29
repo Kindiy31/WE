@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { MenuButton } from "../MenuButton/MenuButton";
 import { useClickOutside } from "../../Hooks/useClickOutside";
+import { BASE_URL } from "../../config";
 import axios from 'axios';
 import "./Header.css";
 
@@ -42,7 +43,7 @@ export const Header = (props) => {
     });
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://192.168.0.6:5000/api/categories');
+        const response = await axios.get(`${BASE_URL}categories`);
         console.log(response);
         SetCategories(response.data);
       } catch (error) {

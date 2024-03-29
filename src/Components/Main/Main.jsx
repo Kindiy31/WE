@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { BASE_URL } from "../../config";
 import axios from 'axios';
 
 export const Main = (props) => {
@@ -10,7 +11,7 @@ export const Main = (props) => {
               const data = {
                 id_category: props.categorie
                 };
-              const response = await axios.post('http://192.168.0.6:5000/api/products', data);
+              const response = await axios.post(`${BASE_URL}products`, data);
               SetProducts(response.data);
             } catch (error) {
               console.error('Error fetching categories: ', error);
